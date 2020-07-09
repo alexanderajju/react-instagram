@@ -1,4 +1,6 @@
-const firebaseConfig = {
+import firebase from "firebase"
+
+const firebaseApp = firebase.initializeApp({
     apiKey: "AIzaSyCKoSrk01iwhkHvP8-QJ6gOlSncCF0O2T0",
     authDomain: "social-clone-67b59.firebaseapp.com",
     databaseURL: "https://social-clone-67b59.firebaseio.com",
@@ -7,4 +9,11 @@ const firebaseConfig = {
     messagingSenderId: "353967823647",
     appId: "1:353967823647:web:06f716e427c1fd19a22e2a",
     measurementId: "G-XM0FNMEJPJ"
-  };
+
+});
+
+const db =firebaseApp.firestore();
+const auth = firebase.auth();
+const storage = firebase.storage();
+
+export {db, auth, storage};
