@@ -223,11 +223,29 @@ const signIn = (event)=>{
       
       
 <div className="app__posts">
-{
+  <div className="app__postsLeft">
+  {
       posts.map(({id,post}) => (
-        <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
+        <Post key={id} user={user} postId={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
       ))
     }
+  </div>
+
+    <div className="app__postsRight">
+    <InstagramEmbed
+  url='https://instagr.am/p/s4Iyt/'
+  maxWidth={320}
+  hideCaption={false}
+  containerTagName='div'
+  protocol=''
+  injectScript
+  onLoading={() => {}}
+  onSuccess={() => {}}
+  onAfterRender={() => {}}
+  onFailure={() => {}}
+/>
+    </div>
+
 </div>
 
 
