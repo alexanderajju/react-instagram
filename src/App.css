@@ -35,4 +35,12 @@
   object-fit: scale-down;
 
 }
+.app__login{
+  display: flex;
+  margin-left: 50vw;
+ 
+ 
+  
+  /* margin-left: 100px; */
+}
 

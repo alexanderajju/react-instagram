@@ -7,6 +7,7 @@ import Modal from '@material-ui/core/Modal';
 import { Button, Input } from '@material-ui/core';
 import ImageUpload from './ImageUpload';
 import InstagramEmbed from 'react-instagram-embed';
+import Embed from 'react-embed';
 
 
 
@@ -233,7 +234,7 @@ const signIn = (event)=>{
 
     <div className="app__postsRight">
     <InstagramEmbed
-  url='https://instagr.am/p/s4Iyt/'
+  url='https://instagr.am/p/CCbT0C3pLYunKOoSpvIGxz4mjfTOoX0a_2LRQ40/'
   maxWidth={320}
   hideCaption={false}
   containerTagName='div'
@@ -244,6 +245,23 @@ const signIn = (event)=>{
   onAfterRender={() => {}}
   onFailure={() => {}}
 />
+
+
+<InstagramEmbed
+  url='https://www.instagram.com/p/CCbT0C3pLYu/?utm_source=ig_embed&amp;utm_campaign=loading'
+  maxWidth={320}
+  hideCaption={false}
+  containerTagName='div'
+  protocol=''
+  injectScript
+  onLoading={() => {}}
+  onSuccess={() => {}}
+  onAfterRender={() => {}}
+  onFailure={() => {}}
+/>
+
+<Embed url='https://www.instagram.com/p/CBaJ9MfjxpU/' />
+<Embed url='https://www.linkedin.com/in/aju-alex-31a85a157/' />
     </div>
 
 </div>
@@ -256,7 +274,7 @@ const signIn = (event)=>{
         user?.displayName ? (
           <ImageUpload username={user.displayName} />
         ): (
-          <h3>Please Login </h3>
+          <h3 className="app__login">Please Login </h3>
         )
       }
     </div>
